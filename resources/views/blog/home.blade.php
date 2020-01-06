@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="jumbotron text-center">
-                    <a href="{{route('user.article.index')}}"><p><span class="label label-primary">Категорий {{$count_articles}}</span></p></a>
+                    <a href="{{route('user.article.index')}}"><p><span class="label label-primary">Материал {{$count_articles}}</span></p></a>
                 </div>
             </div>
         </div>

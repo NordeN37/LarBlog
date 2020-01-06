@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
+    //запрет на вход без аутентификации
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     //Dashboard
     public function dashboard() {
         return view('blog.home', [

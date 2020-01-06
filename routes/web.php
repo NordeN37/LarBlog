@@ -13,7 +13,7 @@
 
 Route::get('/blog/category/{slug?}', 'BlogController@category')->name('category');
 Route::get('/blog/article/{slug?}', 'BlogController@article')->name('article');
-Route::get('/', 'BlogController@homearticles')->name('homeart');
+
 
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
   Route::get('/', 'DashboardController@dashboard')->name('admin.index')->middleware('admin');
@@ -36,4 +36,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');

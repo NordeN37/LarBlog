@@ -18,6 +18,6 @@ class Admin
             if(User::find(Auth::id())->isAdmin == 1){
                 return $next($request);
         }
-            return redirect('home');
+            return redirect('/');
     }
 }
