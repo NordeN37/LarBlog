@@ -2,11 +2,15 @@
 Блог на основе Laravel, с основными функциями. 
 ## Install (Установка)
 Перед установкой необходимо создать базу данных.
-В файле .env установть данные для входа в базу.
+В файле .env установть данные для входа в базу.<br />
+
 composer install<br />
 npm install<br />
-php artisan migrate<br />
+cp .env.example .env
 php artisan key:generate<br /><br />
+sudo chown -R www-data:www-data storage/logs storage/framework/views storage/app/public storage/framework/sessions storage/framework/cache storage/framework/views<br />
+php artisan storage:link<br />
+php artisan migrate<br />
 После выполнения всех процедур, уже на запущенном сайте, пройти регистрацию
 и вручную в базе данных поправить данные в таблице(user/isAdmin) на 1, для
 доступа в Административную панель.
